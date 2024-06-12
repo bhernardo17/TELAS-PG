@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div style="width: 400px; height: 400px; ">
+        <canvas id="grafico1"></canvas>
+    </div>
+
+
+    <div style="width: 400px; height: 400px; ">
+        <canvas id="grafico2"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        let labelsx=["jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dec"]
+        let valoresx=[10,20,30,30,55,10,3,60,90,11,119,77]
+      
+        new Chart(grafico1, {
+          type: 'bar',
+          data: {
+            labels: labelsx,//manipular
+            datasets: [{
+              label: 'informações',
+              data: valoresx,//manipular
+              borderWidth: 1
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        new Chart(grafico2, {
+          type: 'pie',
+          data: {
+            labels: [
+                'Betha',
+                'Ciga',
+                'CIASC'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                'rgba(150, 165, 189, 1)',
+                'rgb(54, 162, 235)',
+                'rgba(175, 188, 207, 1)'
+                ],
+                hoverOffset: 4
+            }]
+        }});
+        
+        
+
+      </script>
+</body>
+</html>
+
+
+<!-- <canvas class="line-chart"></canvas>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+
+<script>
+    
+    var ctx = document.getElementsByClassName("line-chart");
+
+    // type, data e options
+    var chartGraph = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+        datasets: [{
+            label:"Taxa de Cliques - 2017",
+            data:[5,10,5,14,8 ,3],
+            borderWidht: 6,
+            borderColor: 'rgba(77,166,253,0.85)',
+            backgroundColor:'Transparent',
+        }]
+    }
+
+    });
+
+</script> -->

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.8"
+  },
+  "name": "dashboard",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

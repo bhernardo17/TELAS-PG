@@ -1,0 +1,665 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(228, 232, 244, 1);
+  font-family: "Montserrat", sans-serif;
+  overflow: scroll;
+}
+
+.form-container {
+  width: 740px;
+  justify-content: center;
+  border-radius: 2%;
+  text-align: center;
+  margin-left: auto; 
+  margin-right: auto; 
+  color: rgb(2, 2, 4);
+  position: relative; 
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exemplo_txt {
+  color: black;
+}
+
+.bottom-left {
+  width: 50%;
+}
+
+.bottom-right {
+  width: 50%;
+}
+
+.paragraph {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10%;
+  color: rgba(43, 43, 100, 1);
+  background: rgba(241, 239, 239, 0.964)
+}
+
+.exemplo_txt {
+    color: rgba(43, 43, 100, 1);
+}
+
+.sem_borda {
+  padding: 10px;
+  margin: 5px;
+  color: rgba(43, 43, 100, 1);
+}
+
+.ex_borda {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10%;
+  color: rgb(0, 0, 0);
+  background: rgba(241, 239, 239, 0.964)
+}
+
+.doc_contrato {
+    color: rgba(43, 43, 100, 1);
+}
+
+.tamanho {
+    font-size: 88%
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.btn {
+  padding: 14px 22%;
+  background: rgba(148, 168, 207, 1);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  display: flex; 
+  margin: 0 auto; 
+  margin-top: 3%;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color:rgba(43, 43, 100, 1);
+  color:white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  margin-left: 26.6%;
+}
+
+.dropdown-content form {
+    padding: 20px;
+}
+
+
+/* botão "contrato" */
+.container{
+  display: absolute;
+  padding: 5px;
+}
+
+/* fim botão contrato */
+
+/* botão anexe documento */
+.btn_anexo{
+  padding: 14px 40%;
+  background: rgba(43, 43, 100, 1);
+  color: rgb(255, 255, 255);
+  border: 1px solid 20%;
+  cursor: pointer;
+  display: flex; 
+  margin: 0 auto; 
+  margin-top: 3%;
+  border-radius: 5px;
+}
+/* fim botão anexe o doc */
+
+h1{
+    color: rgba(43, 43, 100, 1);
+}
+
+/* Modal e Botão editar */
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centralizar o modal verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Definir largura do modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para o botão "Editar" */
+.btnedit {
+  background-color: rgb(255, 255, 255);
+  color: rgba(148, 168, 207, 1);
+  border: none;
+  padding: 2px 9%;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  margin-left:77%;
+}
+
+
+/* SIDEBAR */
+/* sidebar*/
+.sidebar {
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 43, 100, 1);
+  padding-top: 20px;
+  transition: width 0.1s;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 0 5% 5% 0;
+  font-size: 15px;
+  color: rgba(148, 168, 207, 1);
+}
+
+.sidebar a {
+  padding: 12px;
+  text-decoration: none;
+  color: rgba(148, 168, 207, 1);
+  display: flex;
+  align-items: center;
+  transition: padding 1s;
+  position: relative;
+}
+
+.sidebar a:hover::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(148, 168, 207, 0.6);
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open a:hover::before {
+  left: calc(22% - 18px - 25px);
+}
+
+.sidebar a:hover::before {
+  transform: scale(1);
+}
+
+.sidebar.open .sidebar-header a::before {
+  display: none;
+}
+
+.main-content {
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.icon-text {
+  display: none;
+  color: rgba(148, 168, 207, 0.6);
+}
+
+.icon-text:hover {
+  display: block;
+  color: rgb(222, 222, 222); 
+}
+
+
+.sidebar.open a {
+  padding: 12px 20px;
+  padding-left: 20px;
+}
+
+
+.sidebar.open {
+  width: 250px;
+}
+
+
+.sidebar.open .icon-text {
+  display: inline;
+}
+
+
+.sidebar.open .icon-middle {
+  margin-bottom: 15px;
+}
+
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 100px;
+}
+
+
+.sidebar-header a {
+  margin-right: 10px;
+}
+
+
+.icon-middle {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.sidebar.open .icon-middle {
+  padding-right: 10px;
+}
+
+
+.sidebar.open .icon-middle .icon-text {
+  margin-left: 12px;
+}
+
+
+.bottom-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+
+.bottom-icons a {
+  display: block;
+  padding: 12px;
+  color: rgba(148, 168, 207, 1);
+  transition: padding 1s;
+  text-decoration: none;
+}
+
+.sidebar.open .bottom-middle {
+  padding-right: 10px;
+}
+
+
+.sidebar.open .bottom-icons .icon-text {
+  margin-left: 10px;
+}
+
+.modoff {
+  display: none;
+  z-index: 100;
+}
+
+.modalCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color:white;
+  z-index: 101;
+  text-align: center;
+  background-color: rgba(138, 138, 168, 0.83); 
+  width: 25%;
+  height: 20%;
+  padding: 20px;
+  border-radius: 16px;
+  margin: auto;
+  position: fixed;
+  top: 75%;
+  left: 20%;
+  transform: translate(-50%,-50%);
+}
+
+.modal p {
+  font-size: 24px;
+}
+
+.divBtn {
+  width: 300px;
+}
+
+.btnoff {
+  background-color: rgba(43, 43, 100, 1); 
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer; 
+  color:white;
+  margin-left: 20%;
+}
+
+#iconExit {
+  font-size: 35px;
+}
+
+#kkk {
+  color: aqua;
+}
+
+#k2 {
+  color: aqua;
+  z-index: 10000;
+}
+
+
+/* Modal*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 110%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-content {
+  width: 58%;
+  justify-content: center;
+  border-radius: 2%;
+  text-align: center;
+  margin-left: 16%; 
+  margin-right: 50%; 
+  color: rgb(2, 2, 4);
+  position: relative; 
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.button3 {
+  display:inline-flex; 
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 80%;
+  padding: 10px;
+  background-color: rgba(43, 43, 100, 1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+
+.btn-custom{
+  background-color: rgb(255, 0, 251);
+  color: rgb(237, 17, 17)
+}
+
+
+/* + Estilos do Modal  */
+.container3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.right2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exemplo_txt2 {
+  color: black;
+}
+
+.bottom-left {
+  width: 50%;
+}
+
+.bottom-right2 {
+  width: 50%;
+}
+
+.paragraph2 {
+  padding: 10px;
+  margin: 20px;
+  width: 60%;
+  border-radius: 10%;
+  color: rgba(43, 43, 100, 1);
+  background: rgba(241, 239, 239, 0.964);
+  background-color: rgba(241, 239, 239, 0.964);
+}
+
+.paragraph3 {
+  padding: 10px;
+  margin: 1px;
+  width: 100%;
+  border-radius: 10%;
+  color: rgba(43, 43, 100, 1);
+  background: rgba(241, 239, 239, 0.964)
+}
+
+.titulo{
+  border: none;
+  font-size: 200%;
+  text-align: center;
+  align-items: center;
+  color:rgba(43, 43, 100, 1);
+  outline:none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 10px; 
+  border-radius: 10%;
+  color: rgba(43, 43, 100, 1);
+  background-color: rgba(241, 239, 239, 0.964);
+  outline:none;
+
+}
+
+.input-group::placeholder{
+  background: rgba(241, 239, 239, 0.964);
+  color:rgba(241, 239, 239, 0.964);
+  outline:none;
+
+
+}
+
+.input-group p {
+  margin: 0; 
+  margin-right: 10px; 
+  outline:none;
+
+
+}
+
+.exemplo_txt2 {
+  color: rgba(43, 43, 100, 1);
+  width: 30%; 
+  border:none;
+  outline:none;
+  background-color: rgba(241, 239, 239, 0.964);
+
+
+}
+
+.exemplo_txt2::placeholder {
+  color:rgba(241, 239, 239, 0.964) ;
+
+}
+
+
+.sem_borda2 {
+  padding: 10px;
+  margin: 5px;
+  color: rgba(43, 43, 100, 1);
+  outline:none;
+
+}
+
+.ex_borda2 {
+  width: 180%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10%;
+  color: rgb(0, 0, 0);
+  background: rgba(241, 239, 239, 0.964);
+  border: none;
+  outline:none;
+
+}
+
+.ex_borda3 {
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10%;
+  color: rgb(0, 0, 0);
+  background: rgba(241, 239, 239, 0.964);
+  border: none;
+  outline:none;
+
+}
+
+.input{
+ background-color: rgba(241, 239, 239, 0.964);
+}
+
+.doc_contrato2 {
+  color: rgba(43, 43, 100, 1);
+}
+
+.tamanho2 {
+  font-size: 88%;
+  outline:none;
+
+}
+
+.form-container {
+  padding: 20px;
+}
+
+/* botões de anexo */
+.btn {
+  padding: 14px 22%;
+  background: rgba(148, 168, 207, 1);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  display: flex; 
+  margin: 0 auto; 
+  margin-top: 3%;
+  border-radius: 5px;
+
+}
+
+.tamanho2{
+  border:1px solid rgba(43, 43, 100, 1);
+}
+
+
+.btn_anexo2{
+  padding: 14px 40%;
+  background: rgba(43, 43, 100, 1);
+  color: rgb(255, 255, 255);
+  border: 1px solid 20%;
+  cursor: pointer;
+  display: flex; 
+  margin: 0 auto; 
+  margin-top: 3%;
+  border-radius: 5px;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  margin-left: 57%;
+  margin-top: 5%;
+  margin-bottom: 15px;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 40%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}

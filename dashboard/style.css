@@ -1,0 +1,355 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(228, 232, 244, 1);
+    display: flex;
+}
+
+header {
+    background-color: rgb(209, 219, 243);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    padding: 20px;
+}
+
+.dropdown {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 25%;
+}
+
+.dropdown select {
+    padding: 8%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    width: 250%;
+    background-color: rgba(43, 43, 100, 0.9);
+
+}
+
+/* Estilo para garantir que o texto "Selecione a Secretaria" seja visível */
+.dropdown select option[disabled]:first-child {
+    color: #333;
+}
+
+.line-chart{
+    width: 100%;
+    color: red;
+    position: absolute;
+}
+
+.panel {
+    display: flex;
+    position: absolute;
+    padding: 0;
+    gap: 0px;
+    border-radius: 0px;
+    opacity: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+#panel1 {
+    width: 62%;
+    height: 57%;
+    border-radius: 24px;
+    color: #fff;
+    background-color:rgba(43, 43, 100, 0.9);
+    margin-top: 4%;
+    margin-left: 34%;
+}
+
+#panel2 {
+    width: 30%;
+    height: 57%;
+    padding:24px;
+    margin-right: 0px;
+    gap: 10px;
+    border-radius: 24px;
+    color: #fff;
+    background-color: rgba(43, 43, 100, 0.9);
+    margin-bottom: 20px;
+    margin-top: 4%;
+    margin-left: 127.5%;
+} 
+    
+
+#panel3 {
+    width: 35%;
+    height: 59.3%;
+    border-radius: 24px;
+    margin-left:34%;
+    margin-top:32%;
+    gap: 24px;
+    color: #fff;
+    background-color: rgba(43, 43, 100, 0.9);
+} 
+
+#panel4 {
+    width: 44%;
+    height: 59.3%;
+    gap: 0px;
+    border-radius: 24px;
+    margin-right: 265px;
+    color: #fff;
+    background-color: rgba(43, 43, 100, 0.9);
+    margin-top:32%;
+    margin-left: 131.5%;
+    
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    margin-top: 33%;
+    flex-direction: column;
+    margin-left: 5%;
+
+}
+
+.info-box {
+    background-color: rgba(43, 43, 100, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 2% 0;
+    text-align: left;
+    width:100%;
+    display: flex;
+    flex-direction: column; /* Alterado para alinhar o ícone, título e valor verticalmente */
+    align-items: center; /* Alterado para alinhar o ícone, título e valor horizontalmente */
+}
+
+.info-box span {
+    font-size: 40px;
+    color: #f4f4f4;
+    margin-bottom: 1px; /* Adicionado para separar o ícone do título */
+    background-color: #989595;
+    border: 1px solid #2e2c2c;
+    border-radius: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.info-box h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px; /* Adicionado para separar o título do valor */
+}
+
+.info-box p {
+    font-size: 24px;
+    color: #989595;
+    margin: 0; /* Adicionado para remover a margem padrão do parágrafo */
+}
+
+/* sidebar*/
+.sidebar {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 43, 100, 1);
+    padding-top: 20px;
+    transition: width 0.1s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 0 5% 5% 0;
+    font-size: 15px;
+    color: rgba(148, 168, 207, 1);
+}
+  
+.sidebar a {
+    padding: 12px;
+    text-decoration: none;
+    color: rgba(148, 168, 207, 1);
+    display: flex;
+    align-items: center;
+    transition: padding 1s;
+    position: relative;
+}
+  
+.sidebar a:hover::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(148, 168, 207, 0.6);
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+  
+.sidebar.open a:hover::before {
+    left: calc(22% - 18px - 25px);
+}
+  
+.sidebar a:hover::before {
+    transform: scale(1);
+}
+  
+.sidebar.open .sidebar-header a::before {
+    display: none;
+}
+  
+.main-content {
+    margin-left: 50px;
+    padding: 20px;
+}
+  
+.icon-text {
+    display: none;
+    color: rgba(148, 168, 207, 0.6);
+}
+  
+.icon-text:hover {
+    display: block;
+    color: rgb(222, 222, 222); 
+}
+  
+  
+.sidebar.open a {
+    padding: 12px 20px;
+    padding-left: 20px;
+}
+  
+  
+.sidebar.open {
+    width: 250px;
+}
+
+  
+.sidebar.open .icon-text {
+    display: inline;
+}
+  
+  
+.sidebar.open .icon-middle {
+    margin-bottom: 15px;
+}
+  
+  
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 100px;
+}
+  
+  
+.sidebar-header a {
+    margin-right: 10px;
+}
+  
+  
+.icon-middle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+  
+.sidebar.open .icon-middle {
+    padding-right: 10px;
+}
+  
+  
+.sidebar.open .icon-middle .icon-text {
+    margin-left: 12px;
+}
+  
+  
+.bottom-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+  
+  
+.bottom-icons a {
+    display: block;
+    padding: 12px;
+    color: rgba(148, 168, 207, 1);
+    transition: padding 1s;
+    text-decoration: none;
+}
+  
+.sidebar.open .bottom-middle {
+    padding-right: 10px;
+}
+  
+  
+.sidebar.open .bottom-icons .icon-text {
+    margin-left: 10px;
+}
+
+.modoff {
+    display: none;
+    z-index: 100;
+}
+
+.modalCont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    z-index: 101;
+    text-align: center;
+    background-color: rgba(138, 138, 168, 0.83); 
+    width: 25%;
+    height: 20%;
+    padding: 20px;
+    border-radius: 16px;
+    margin: auto;
+    position: fixed;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+
+.modal p {
+    font-size: 24px;
+}
+
+.divBtn {
+    width: 300px;
+}
+
+.btnoff {
+    background-color: rgba(43, 43, 100, 1); 
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer; 
+    color:white;
+    margin-left: 20%;
+}
+
+#iconExit {
+    font-size: 35px;
+}
+
+#kkk {
+    color: aqua;
+}
+
+#k2 {
+    color: aqua;
+    z-index: 10000;
+}

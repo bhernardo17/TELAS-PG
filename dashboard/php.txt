@@ -1,0 +1,73 @@
+<?php
+function getFornecedoresCount() {
+    // ConfiguraÃ§Ã£o da conexÃ£o com o banco de dados
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "meu_banco";
+
+    // CriaÃ§Ã£o da conexÃ£o
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Checagem da conexÃ£o
+    if ($conn->connect_error) {
+        die("Falha na conexÃ£o: " . $conn->connect_error);
+    }
+
+    // Consulta SQL para obter o nÃºmero de fornecedores
+    $sql = "SELECT COUNT(*) AS count FROM fornecedores";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $conn->close();
+
+    return $row['count'];
+}
+
+function getGastosTotal() {
+    // ConfiguraÃ§Ã£o da conexÃ£o com o banco de dados
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "meu_banco";
+
+    // CriaÃ§Ã£o da conexÃ£o
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Checagem da conexÃ£o
+    if ($conn->connect_error) {
+        die("Falha na conexÃ£o: " . $conn->connect_error);
+    }
+
+    // Consulta SQL para obter o total de gastos
+    $sql = "SELECT SUM(valor) AS total FROM gastos";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $conn->close();
+
+    return $row['total'];
+}
+
+function getContratosAtivosCount() {
+    // ConfiguraÃ§Ã£o da conexÃ£o com o banco de dados
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "meu_banco";
+
+    // CriaÃ§Ã£o da conexÃ£o
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Checagem da conexÃ£o
+    if ($conn->connect_error) {
+        die("Falha na conexÃ£o: " . $conn->connect_error);
+    }
+
+    // Consulta SQL para obter o nÃºmero de contratos ativos
+    $sql = "SELECT COUNT(*) AS count FROM contratos WHERE status = 'ativo'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $conn->close();
+
+    return $row['count'];
+}
+?>

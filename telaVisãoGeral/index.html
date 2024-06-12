@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão Geral de Contratos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-DP1Kb8wQuVP+44iCJcJ3rJYweuXMMA/+ttTFeZ/2ZMHgNWj5fFbRh8WB3Z2ER0qV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="search-bar">
+    <input type="text" placeholder="Pesquisar...">
+</div>  
+
+<div class="tudo"> 
+    <button class="contratos" onclick="changeFormContent('eletronico')"><strong>Eletrônico</strong></button>
+    <button class="contratos" onclick="changeFormContent('contrato')"><strong>Contrato</strong></button>       
+    <form class="form-container">
+        <div class="container" id="form-content">
+                    <p class="paragraph"><strong>Vigência</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph"><strong>Fornecedor</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph"><strong>CNPJ</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph"><strong>Sistema</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph"><strong>Info.Contratuais</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph"><strong>Valor Anual</strong><span class="exemplo_txt"></span></p>
+
+                    <p class="paragraph" class="border"><strong>Fiscal e-Gov</strong><span class="exemplo_txt"></span></p>
+                    
+                    
+                <div class="baixo">
+                    <button class="btnarqui"><span class="material-symbols-outlined">inventory_2</span>Arquivar</button>
+                    <button id="editarBtn" class="btnedit"><span class="material-symbols-outlined">
+                        border_color
+                        </span>Editar</button>
+                </div>  
+            </div>
+    </form>  
+</div>
+
+
+
+<div id="modalEditar" class="modal">
+  <div class="modal-content">
+    <span id="closeEditar" class="close">&times;</span>
+    <div class="container">
+        <input class="titulo" placeholder="Titulo"></input>
+            <div class="container3">
+                <div class="left2">
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>InicioVigência:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>FimVigência:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Fornecedor:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Sistema:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                     </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Info.Contratuais:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Valor Anual:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Fiscal e-Gov:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                    <div class="input-group">
+                        <p class="paragraph2"><strong>Fiscal Adm:</strong></p>
+                        <input type="text" class="exemplo_txt2" value="Exemplo">
+                    </div>
+                </div>
+                <div class="right2">
+                    <p class="paragraph3"><strong>Objeto:</strong></p>
+                    <textarea class="tamanho2" rows="6" cols="50">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                        Nunc sit amet molestie lorem.
+                        Phasellus vehicula semper est, eu lobortis mi scelerisque quis.
+                        Curabitur nisl erat, posuere eu nibh sit amet, ultricies aliquam odio.
+                        Sed fermentum mauris eget lorem dictum, quis bibendum mi mollis.
+                        In hac habitasse platea dictumst.
+                    </textarea>
+                    <p class="paragraph3"><strong>Detalhes e Observações:</strong></p>
+                    <textarea class="tamanho2" rows="6" cols="50">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                        Nunc sit amet molestie lorem.
+                        Phasellus vehicula semper est, eu lobortis mi scelerisque quis.
+                        Curabitur nisl erat, posuere eu nibh sit amet, ultricies aliquam odio.
+                        Sed fermentum mauris eget lorem dictum, quis bibendum mi mollis.
+                        In hac habitasse platea dictumst.
+                    </textarea>
+                </div>
+            </div>
+            <div class="bottom2">
+                <div class="bottom-left2">
+                    <p class="sem_borda2"><strong>Gestores:</strong></p>
+                    <input type="text" class="ex_borda2">
+                </div>
+                <div class="bottom-right2">
+                    <p class="sem_borda2"><strong>Secretaria:</strong></p>
+                    <input type="text" class="ex_borda3">
+                </div>
+            </div>
+            <div class="form-group2">
+                <span class="doc_contrato2"2><strong>Doc.Contrato</strong></span>
+                <button type="submit3" class="btn_anexo2">Anexe Aqui</button>
+            </div>
+            <div class="bottom2">
+                <div class="bottom-left2">
+                    <p class="sem_borda2"><strong>Categoria:</strong></p>
+                    <input type="text" class="ex_borda2">
+                </div>
+                <div class="bottom-right2">
+                    <p class="sem_borda2"><strong>Nome_Comercial:</strong></p>
+                    <input type="text" class="ex_borda3">
+                </div> 
+            </div>
+
+            <div class="row justify-content-between">
+
+                <div class="salvar">
+                    <button type="buttonB" onclick="salvar()" class="btn btn-custom btn-lg">Salvar</button>
+                </div>     
+            </div>
+                   
+ 
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+       <a href="#" onclick="toggleSidebar()">☰</a><span class="icon-text">Gestão de Sistemas PMF</span>
+   </div>
+   <a href="#" class="icon-middle"><span class="material-symbols-outlined">grid_view</span><span class="icon-text"> Dashboard</span></a>
+   <a href="C:\Users\Teste\Desktop\PROJETO\telaCadastros/index.html" class="icon-middle"><span class="material-symbols-outlined">how_to_reg</span><span class="icon-text"> Cadastrar</span></a>
+   <a href="#" class="icon-middle"><span class="material-symbols-outlined">add</span><span class="icon-text" >Adicionar</span></a>
+   <a href="#" class="icon-middle"><span class="material-symbols-outlined">contract</span></i><span class="icon-text"> Contratos</span></a>
+   <a href="PROJETO/ativinho/index.html" class="icon-middle"><span class="material-symbols-outlined">inventory_2</span><span class="icon-text"> Arquivados</span></a>
+   <div class="bottom-icons">
+       <a href="#" class="icon-bottom"><span class="material-symbols-outlined">update</span><span class="icon-text"> Histórico</span></a>
+       <a href="#" class="icon-bottom" id="botaoExit"><i class="fa fa-sign-out"><span class="material-symbols-outlined">logout</span></i><span class="icon-text"> Sair</span></a>
+   </div>
+</div>
+
+<div id="modalExit" class="modoff">
+   <div class="modalCont">
+     <i class="bi bi-box-arrow-right" id="iconExit"></i>
+     <p>Você realmente deseja sair ?</p>
+     <div class="divBtn">
+       <button class="btnoff" id="voltar">Voltar</button>
+       <button class="btnoff" id="sair">Sair</button>
+     </div>
+   </div>
+</div>
+
+
+
+
+
+<script src="script.js">   
+</script>  
+</body>
+</html>
+
+  

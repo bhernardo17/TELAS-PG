@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+:root {
+    --fonteInter: "Inter", sans-serif;
+    --fonteMontserrat: "Montserrat", sans-serif;
+    --branco: #ffffff;
+    --preto: black;
+    --fundo: #E4E8F4;
+}
+
+body {
+    background-color: #E4E8F4;
+    ;
+}
+
+.boxAuditoria {
+    width: 952px;
+    height: 25px;
+    border-radius: 8px;
+    padding: 16px 24px 16px 24px;
+    background-color: white;
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 18%;
+    margin-top: 3%;
+}
+
+.infoAuditoria {
+    font-family: var(--fonteInter);
+    color: #2B2B64;
+    font-size: 16px;
+
+}
+
+.timeAuditoria {
+    color: #B7B7B7;
+    font-size: 12px;
+    font-family: var(--fonteInter);
+}
+
+#clock {
+    margin-right: 5px;
+} 
+
+#btnHistorico {
+    border: none;
+    font-family: var(--fonteInter);
+    font-size: 12px;
+    color:#94A8CF;
+    background-color: #E4E8F4;
+    width: 128px;
+    height: 34px;
+    cursor: pointer;
+    
+}
+
+#trash {
+    color:#94A8CF;
+    font-size: 20px;
+}
+
+
+/* SIDEBAR */
+/* loggout */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@606&display=swap');
+:root {
+    --fonteInter: "Inter", sans-serif;
+    --fonteMontserrat: "Montserrat", sans-serif;
+    --branco: #ffffff;
+    --preto: black;
+}
+
+body {
+    font-family: var(--fonteInter);
+    background-color: var(--fundo);
+    z-index: 0;
+    margin: 0; /* Remover margens padrão */
+    padding: 0; /* Remover preenchimento padrão */
+    height: 100vh; /* Ocupar 100% da altura da tela */
+    overflow: hidden; /* Para garantir que o corpo não tenha barras de rolagem */
+}
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+form *{
+    color: rgba(43, 43, 100, 1);
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: rgb(27, 26, 26);
+    background-color: rgba(245, 245, 245, 3);
+
+
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color:rgba(245, 245, 245, );
+    color: hsl(247, 54%, 21%);
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+button:hover{
+    background: hsl(247, 54%, 21%);
+    color: antiquewhite;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color:rgba(245, 245, 245, 1);
+
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 43, 100, 1);
+    padding-top: 20px;
+    transition: width 0.1s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 0 5% 5% 0;
+    font-size: 15px;
+    color: rgba(148, 168, 207, 1);
+}
+  
+.sidebar a {
+    padding: 12px;
+    text-decoration: none;
+    color: rgba(148, 168, 207, 1);
+    display: flex;
+    align-items: center;
+    transition: padding 1s;
+    position: relative;
+}
+  
+.sidebar a:hover::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(148, 168, 207, 0.6);
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+  
+.sidebar.open a:hover::before {
+    left: calc(22% - 18px - 25px);
+}
+  
+.sidebar a:hover::before {
+    transform: scale(1);
+}
+  
+.sidebar.open .sidebar-header a::before {
+    display: none;
+}
+  
+.main-content {
+    margin-left: 50px;
+    padding: 20px;
+}
+  
+.icon-text {
+    display: none;
+    color: rgba(148, 168, 207, 0.6);
+}
+  
+.icon-text:hover {
+    display: block;
+    color: rgb(222, 222, 222); 
+}
+  
+  
+.sidebar.open a {
+    padding: 12px 20px;
+    padding-left: 20px;
+}
+  
+  
+.sidebar.open {
+    width: 250px;
+}
+
+  
+.sidebar.open .icon-text {
+    display: inline;
+}
+  
+  
+.sidebar.open .icon-middle {
+    margin-bottom: 15px;
+}
+  
+  
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 100px;
+}
+  
+  
+.sidebar-header a {
+    margin-right: 10px;
+}
+  
+  
+.icon-middle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+  
+.sidebar.open .icon-middle {
+    padding-right: 10px;
+}
+  
+  
+.sidebar.open .icon-middle .icon-text {
+    margin-left: 12px;
+}
+  
+  
+.bottom-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+  
+  
+.bottom-icons a {
+    display: block;
+    padding: 12px;
+    color: rgba(148, 168, 207, 1);
+    transition: padding 1s;
+    text-decoration: none;
+}
+  
+.sidebar.open .bottom-middle {
+    padding-right: 10px;
+}
+  
+  
+.sidebar.open .bottom-icons .icon-text {
+    margin-left: 10px;
+}
+
+.modoff {
+    display: none;
+    z-index: 100;
+}
+
+.modalCont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    z-index: 101;
+    text-align: center;
+    background-color: rgba(138, 138, 168, 0.83); 
+    width: 25%;
+    height: 20%;
+    padding: 20px;
+    border-radius: 16px;
+    margin: auto;
+    position: fixed;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+
+.modal p {
+    font-size: 24px;
+}
+
+.divBtn {
+    width: 300px;
+}
+
+.btnoff {
+    background-color: rgba(43, 43, 100, 1); 
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer; 
+    color:white;
+    margin-left: 20%;
+}
+
+#iconExit {
+    font-size: 35px;
+}
+
+#kkk {
+    color: aqua;
+}
+
+#k2 {
+    color: aqua;
+    z-index: 10000;
+}
